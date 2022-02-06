@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
@@ -10,7 +9,6 @@ pipeline {
                 	sh 'cd ~/.pyenv && eval "$(pyenv init -)"'
             	  }
 	    }
-        }
         stage('Test') {
             steps {
                 echo 'Testing..'
@@ -22,3 +20,4 @@ pipeline {
             }
         }
     }
+}
