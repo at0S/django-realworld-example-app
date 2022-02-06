@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Setting pyenv'
                 sh 'git clone https://github.com/pyenv/pyenv.git ~/.pyenv'
-                sh 'pushd ~/.pyenv && eval "$(pyenv init -)"'
+                sh 'cd ~/.pyenv && eval "$(pyenv init -)"'
             }
         }
         stage('Test') {
