@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building docker image'
+                sh 'docker build -t matific:latest .'
             }
 	    }
         stage('Deploy') {
